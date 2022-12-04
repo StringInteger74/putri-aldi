@@ -15,88 +15,186 @@ footer.innerHTML = sender;
 footer.href = "https://www.instagram.com/aaaaldiaa/";
 
 document.querySelector(".tombol").addEventListener('click', function () {
-  Swal.fire("Hallo Sayangku Putri", "Aku ada pertanyaan nih buat kamu?", "question").then(function () {
-    Swal.fire("Jawab yang jujur ya!").then(function () {
-      Swal.fire("Awas aja kalo boong!!", "", "error").then(function () {
+  confetti();
+  const teks = document.getElementById('teks');
+  const btn = document.querySelector('.tombol');
+  teks.classList.remove('d-none')
+  btn.classList.add('d-none')
+  console.log(teks);
+  console.log(btn);
 
-        const {
-          value: name
-        } = Swal.fire({
-          title: 'Masukin nama lengkap kamu dulu',
-          input: 'text',
-          inputLabel: '',
-          showCancelButton: true,
-          inputValidator: (value) => {
-            if (!value) {
-              return 'Isi dulu dong yang'
-            } else {
-              nama = value;
-            }
-          }
-        }).then(function () {
-          const pertanyaan = Swal.fire({
-            title: `${nama} sayang ga sama ${sender}?`,
-            showDenyButton: true,
-            showCancelButton: false,
-            confirmButtonText: `Sayang`,
-            denyButtonText: `Gak`,
-          }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-              Swal.fire(`${sender} juga sayang banget sama ${nama}`).then(function () {
-                Swal.fire({
-                  title: 'Seberapa sayang emangnya?',
-                  icon: 'question',
-                  input: 'range',
-                  inputLabel: 'Antara 1 - 100 ya',
-                  inputAttributes: {
-                    min: 1,
-                    max: 100,
-                    step: 1
-                  },
-                  inputValue: 50
-                }).then((e) => {
-                  val = e.value
-                  Swal.fire(`Makasih ya udah sayang sama ${sender} ${val}%`).then(function () {
-                    Swal.fire({
-                      title: `Sekarang ${nama} kangen ga sama ${sender}?`,
-                      showDenyButton: true,
-                      showCancelButton: false,
-                      confirmButtonText: `Kangen :(`,
-                      denyButtonText: `Gak!`,
-                    }).then((result) => {
-                      /* Read more about isConfirmed, isDenied below */
-                      if (result.isConfirmed) {
-                        Swal.fire(`Huhu iya ${sender} juga kangen ${nama} :((`).then(function () {
-                          Swal.fire('Terakhir deh sayang').then(function () {
-                            Swal.fire('Coba klik ikon hati di paling bawah dong')
-                          })
-                        })
-                      } else if (result.isDenied) {
-                        Swal.fire('Jahat banget emang ga kangen sama pacar sendiri', '', 'error').then(function () {
-                          Swal.fire('Yaudah deh bye!')
-                        })
-                      }
-                    })
-                  })
-                })
-              })
-            } else if (result.isDenied) {
-              Swal.fire(`Yakin ga suka sama ${sender}?`, '', 'error').then(function () {
-                Swal.fire('Yaudah deh bye!')
-              })
-            }
-          })
-        })
-      });
-    });
-  });
-});
+})
 
 
 
 document.querySelector('.hati').addEventListener('click', function () {
   confetti();
+  const teks = document.getElementById('teks');
+  const btn = document.querySelector('.tombol');
+  teks.classList.remove('d-none')
+  btn.classList.add('d-none')
+  console.log(teks);
+  console.log(btn);
+})
+
+'use strict';
+
+// If set to true, the user must press
+// UP UP DOWN ODWN LEFT RIGHT LEFT RIGHT A B
+// to trigger the confetti with a random color theme.
+// Otherwise the confetti constantly falls.
+var onlyOnKonami = false;
+
+function confetti() {
+  // Globals
+  var $window = $(window),
+    random = Math.random,
+    cos = Math.cos,
+    sin = Math.sin,
+    PI = Math.PI,
+    PI2 = PI * 2,
+    timer = undefined,
+    frame = undefined,
+    confetti = [];
+
+  var runFor = 2000
+  var isRunning = true
+
+  setTimeout(() => {
+    isRunning = false
+  }, runFor);
+
+  // Settings
+  var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+    pointer = 0;
+
+  var particles = 150,
+    spread = 20,
+    sizeMin = 5,
+    sizeMax = 12 - sizeMin,
+    eccentricity = 10,
+    deviation = 100,
+    dxThetaMin = -.1,
+    dxThetaMax = -dxThetaMin - dxThetaMin,
+    dyMin = .13,
+    dyMax = .18,
+    dThetaMin = .confetti();
+  const teks = document.getElementById('teks');
+  const btn = document.querySelector('.tombol');
+  teks.classList.remove('d-none')
+  btn.classList.add('d-none')
+  console.log(teks);
+  console.log(btn);
+})
+
+'use strict';
+
+// If set to true, the user must press
+// UP UP DOWN ODWN LEFT RIGHT LEFT RIGHT A B
+// to trigger the confetti with a random color theme.
+// Otherwise the confetti constantly falls.
+var onlyOnKonami = false;
+
+function confetti() {
+  // Globals
+  var $window = $(window),
+    random = Math.random,
+    cos = Math.cos,
+    sin = Math.sin,
+    PI = Math.PI,
+    PI2 = PI * 2,
+    timer = undefined,
+    frame = undefined,
+    confetti = [];
+
+  var runFor = 2000
+  var isRunning = true
+confetti();
+  const teks = document.getElementById('teks');
+  const btn = document.querySelector('.tombol');
+  teks.classList.remove('d-none')
+  btn.classList.add('d-none')
+  console.log(teks);
+  console.log(btn);
+})
+
+'use strict';
+
+// If set to true, the user must press
+// UP UP DOWN ODWN LEFT RIGHT LEFT RIGHT A B
+// to trigger the confetti with a random color theme.
+// Otherwise the confetti constantly falls.
+var onlyOnKonami = false;
+
+function confetti() {
+  // Globals
+  var $window = $(window),
+    random = Math.random,
+    cos = Math.cos,
+    sin = Math.sin,
+    PI = Math.PI,
+    PI2 = PI * 2,
+    timer = undefined,
+    frame = undefined,
+    confetti = [];
+
+  var runFor = 2000
+  var isRunning = true
+
+  setTimeout(() => {
+    isRunning = false
+  }, runFor);
+
+  // Settings
+  var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+    pointer = 0;
+
+  var particles = 150,
+    spread = 20,
+    sizeMin = 5,
+    sizeMax = 12 - sizeMin,
+    eccentricity = 10,
+    deviation = 100,
+    dxThetaMin = -.1,
+    dxThetaMax = -dxThetaMin - dxThetaMin,
+    dyMin = .13,
+    dyMax = .18,
+    dThetaMin = .4,
+    dThetaMax = .7 - dThetaMin;
+        
+  setTimeout(() => {
+    isRunning = false
+  }, runFor);
+
+  // Settings
+  var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+    pointer = 0;
+
+  var particles = 150,
+    spread = 20,
+    sizeMin = 5,
+    sizeMax = 12 - sizeMin,
+    eccentricity = 10,
+    deviation = 100,
+    dxThetaMin = -.1,
+    dxThetaMax = -dxThetaMin - dxThetaMin,
+    dyMin = .13,
+    dyMax = .18,
+    dThetaMin = .4,
+    dThetaMax = .7 - dThetaMin;
+        4,
+    dThetaMax = .7 - dThetaMin;
+        
+  var colorThemes = [
+    function () {
+      return color(200 * random() | 0, 200 * random() | 0, 200 * random() | 0);
+    },
+    function () {
+      var black = 200 * random() | 0;
+      return color(200, black, black);
+    },
+    function () {
+      var black = confetti();
   const teks = document.getElementById('teks');
   const btn = document.querySelector('.tombol');
   teks.classList.remove('d-none')
@@ -158,7 +256,7 @@ function confetti() {
       return color(200, black, black);
     },
     function () {
-      var black = 200 * random() | 0;
+      var black = 200200 * random() | 0;
       return color(black, 200, black);
     },
     function () {
